@@ -27,4 +27,8 @@ class House
   def details
    Hash[@details.zip([@price, @address])]
   end
+
+  def price_per_square_foot
+    (@price.gsub("$", "").to_i / self.area.to_f).round(2)
+  end
 end
