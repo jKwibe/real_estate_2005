@@ -111,7 +111,7 @@ class HouseTest < Minitest::Test
   end
 
   def test_it_has_room_sorted_by_area
-    skip
+    # skip
     house = House.new("$400000", "123 sugar lane")
 
     room_1 = Room.new(:bedroom, 10, '13')
@@ -124,7 +124,8 @@ class HouseTest < Minitest::Test
     house.add_room(room_3)
     house.add_room(room_2)
 
-    assert_equal :bedroom, house.rooms_sorted_by_area.last
+    assert_equal :bedroom, house.rooms_sorted_by_area.last.category
+    assert_equal :basement, house.rooms_sorted_by_area.first.category
   end
 end
 
