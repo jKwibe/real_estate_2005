@@ -28,7 +28,7 @@ class HouseTest < Minitest::Test
   end
 
   def test_it_can_add_room
-    skip
+    # skip
     house = House.new("$400000", "123 sugar lane")
 
     room_1 = Room.new(:bedroom, 10, '13')
