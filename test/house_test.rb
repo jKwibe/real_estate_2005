@@ -43,7 +43,7 @@ class HouseTest < Minitest::Test
   end
 
   def test_it_is_above_average
-    skip
+    # skip
     house = House.new("$400000", "123 sugar lane")
 
     assert_equal false, house.above_market_average?
