@@ -13,7 +13,7 @@ class House
   end
 
   def above_market_average?
-    @price > 500000
+    @price.gsub("$", "").to_i > 500000
   end
 
   def rooms_from_category(room_category)
@@ -36,4 +36,7 @@ class House
     @rooms.sort_by{|area| self.area}
   end
 
+  def rooms_by_category
+
+  end
 end
