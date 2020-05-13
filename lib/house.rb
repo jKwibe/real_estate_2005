@@ -13,7 +13,7 @@ class House
   end
 
   def above_market_average?
-    false
+    @price > 500000
   end
 
   def rooms_from_category(room_category)
@@ -35,4 +35,5 @@ class House
   def rooms_sorted_by_area
     @rooms.sort_by{|area| self.area}
   end
+
 end
