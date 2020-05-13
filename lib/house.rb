@@ -5,6 +5,7 @@ class House
     @price   = price
     @address = address
     @rooms = []
+    @details = ["price", "address"]
   end
 
   def add_room(room)
@@ -21,5 +22,9 @@ class House
 
   def area
     @rooms.map{|room| room.area}.inject(){|sum, area| sum + area}
+  end
+
+  def details
+   Hash[@details.zip([@price, @address])]
   end
 end
