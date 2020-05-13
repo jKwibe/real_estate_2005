@@ -18,4 +18,8 @@ class House
   def rooms_from_category(room_category)
     @rooms.select{|room| room.category == room_category}
   end
+
+  def area
+    @rooms.map{|room| room.area}.inject(){|sum, area| sum + area}
+  end
 end
